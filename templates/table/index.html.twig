@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TableController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Table de {{n}} ✅</h1>
+
+    <table border=1>
+        <tr>
+            <td>{{n*1}}</td>
+            <td>{{n*2}}</td>
+            <td>{{n*3}}</td>
+            <td>{{n*4}}</td>
+            <td>{{n*5}}</td>
+            <td>{{n*6}}</td>
+            <td>{{n*7}}</td>
+            <td>{{n*8}}</td>
+            <td>{{n*9}}</td>
+            <td>{{n*10}}</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
