@@ -9,21 +9,19 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Table de {{n}} ✅</h1>
+    <h1 style='color:{{color}}'>Table de {{n}} </h1>
 
-    <table border=1>
-        <tr>
-            <td>{{n*1}}</td>
-            <td>{{n*2}}</td>
-            <td>{{n*3}}</td>
-            <td>{{n*4}}</td>
-            <td>{{n*5}}</td>
-            <td>{{n*6}}</td>
-            <td>{{n*7}}</td>
-            <td>{{n*8}}</td>
-            <td>{{n*9}}</td>
-            <td>{{n*10}}</td>
-        </tr>
+    <table border='1px' style='border-color:{{color}}'>
+    <thead>
+        <th style='color:{{color}}'>Nombre </th>
+        <th style='color:{{color}}'>Multiplicateur </th>
+        <th style='color:{{color}}'>Résultat </th>
+    </thead>
+    <tbody>
+    {% for calculation in calculations %}
+    <tr><td>{{  calculation.indice }}</td><td>{{ n }}</td><td>{{calculation.result}}</td></tr>
+    {% endfor %}
+    </tbody>
     </table>
 </div>
 {% endblock %}
